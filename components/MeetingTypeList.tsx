@@ -18,7 +18,7 @@ const [values, setValues] = useState({
 })
 const [callDetails, setCallDetails] = useState<Call>()
 
-const createMeeting = () => {
+const createMeeting = async() => {
   if(!client || !user) return;
 
   try {
