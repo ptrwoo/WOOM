@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 import React, { useState } from 'react'
 import HomeCard from './HomeCard'
 import { useRouter } from 'next/navigation';
