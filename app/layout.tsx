@@ -14,17 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-dark-2`}>
-        {children}
-        <Toaster />
-        
-      </body>
       <ClerkProvider
         appearance={{
           layout: {
