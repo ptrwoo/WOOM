@@ -29,8 +29,8 @@ const MeetingTypeList = () => {
     try {
       if(!values.dateTime) {
         toast({
-          title: "Please select to create call",
-        })
+          title: "Please select to create call"})
+        return;
       }
       const id = crypto.randomUUID();
       const call = client.call('default', id);
@@ -55,9 +55,7 @@ const MeetingTypeList = () => {
         router.push(`/meeting/${call.id}`)
       }
 
-      toast({
-        title: "meeting created",
-      })
+      toast({title: "meeting created"});
     } catch (error) {
       console.log(error);
       toast({
@@ -67,7 +65,7 @@ const MeetingTypeList = () => {
   }
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`
-  
+
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       <HomeCard 
